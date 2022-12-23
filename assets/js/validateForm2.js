@@ -1,5 +1,8 @@
+const contactForm = document.getElementById("contactForm").addEventListener("submit", validateForm);
 
-function validateForm() {
+
+function validateForm(event) {
+    event.preventDefault()
     // validating email 
     let y = document.forms["myForm"]["Email"].value;
     let p = document.forms["myForm"]["PhoneNumber"].value;
@@ -21,6 +24,14 @@ function validateForm() {
     }
     else
         document.getElementById("message").innerHTML = "Your message has been sent. Thank you!";
+
+    // Sending Data to google sheet
+    var form = document.getElementById('contactForm');
+    var xhr = new XMLHttpRequest();
+    var data = new FormData(form);
+    console.log(data);
+    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbyklALaQ_QV_dZ0RFuBqF6VAba4HEKu6RSN77f730dCw6cnFQfQJWuRsdpwUnSNYz0jrg/exec',true)
+    xhr.send(data);
+    form.reset();
     return true;
-    
 }

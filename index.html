@@ -576,7 +576,14 @@
                       </h5>
                     </div>
                     <div>
-                      <form action="https://script.google.com/macros/s/AKfycbz8Y-qqacPhzIsFV0C5R_P2ysk5XqEWhuOYVmXgENh2/dev" name="myForm" onsubmit="return validateForm()" method="post" target="_blank">
+
+                      <!-- <style>
+                        .hide { position:absolute; top:-1px; left:-1px; width:1px; height:1px; }
+                      </style> -->
+                      <iframe name="hiddenFrame" class="hide"></iframe> 
+                      
+
+                      <form name="myForm" id="contactForm">
                         <div class="row">
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
@@ -599,9 +606,7 @@
                             </div>
                           </div>
                           <div class="col-md-12 text-center my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                            <div class="sent-message" id = "message" ></div>
                           </div>
                           <div class="col-md-12 text-center">
                             <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
@@ -626,7 +631,7 @@
                       <ul class="list-ico">
                         <li><span class="bi bi-geo-alt"></span> Hustle Hub Bengaluru</li>
                         <li><span class="bi bi-phone"></span>+91 8332874282</li>
-                        <li><span class="bi bi-envelope"></span> Mubaraksakariya@gmail.com</li>
+                        <li><span class="bi bi-envelope"></span> mubaraksakariya@gmail.com</li>
                       </ul>
                     </div>
                     <div class="socials">
@@ -685,7 +690,7 @@
 
 
 <!-- Form validation js -->
-<script src="/assets/js/validateForm.js" ></script>
+<script src="/assets/js/validateForm2.js" ></script>
 
 
 </body>
